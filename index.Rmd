@@ -5,48 +5,28 @@ output: html_document
 
 ### Introduction
 
-An introduction of the problem domain and a description of the variable(s) you are choosing to analyze (and why!)
+It is important to know the different proportions found across different state/counties concerning the difference between population and what amount of that population is in jails and what amount of those prisoners are black to justify what counties may be more dangerous or what cities are more likely to incarcerate black criminals. That is why I am choosing to analyze the current (2018) total population from 15 to 64 to represent the population that can legally be incarcerated of each state/county. I am also choosing to analyze the current (2018) total prison population of each state/county to help find the proportions between the county population and its prison population. The last variable I will analyze is the black jail population to compare it with the populations of jails and counties to compare differences and determine possible unfair/disproportionate numbers of incarcerated black citizens. 
 
 ### Summary Information
 
-Write a summary paragraph of findings that includes the 5 values calculated from your summary information R script
-
-These will likely be calculated using your DPLYR skills, answering questions such as: 
-
-- What is the average value of my variable across all the counties (in the current year)?
-- Where is my variable the highest / lowest?
-- How much has my variable change over the last N years?
-
-Feel free to calculate and report values that you find relevant. Again, remember that the purpose is to think about how these measure of incarceration vary by race.
+In order to have a grasp of what the proportions may look like, it will be important to know what the largest and smallest counties are. The county with the highest total population from 15 to 64 is Los Angeles County with 6911101 as of 2018. The county with the lowest total population from 15 to 64 is Wade Hampton Census Area with 0 as of 2018. Another piece of data that will be important is the number of people that are found in jails which I will simply summarize for now by finding the mean. The average current total jail population per county is 248.945 as of 2018. Lastly, it is important to know the number of black people that are found in jails to discover any unfair/disproportionate incarceration of black citizens. The county with the highest total black people in prison is Los Angeles County with 5024 and the lowest was Bethel Census Area with 0 (both in 2018). 
 
 ### The Dataset
 
-Who collected the data?  
-How was the data collected or generated?  
-Why was the data collected?  
-How many observations (rows) are in your data?  
-How many features (columns) are in the data?  
-What, if any, ethical questions or questions of power do you need to consider when working with this data?  
-What are possible limitations or problems with this data?   (at least 200 words)
-
+*Who collected the data?* The data was collected by Vera Institute. 
+*How was the data collected or generated?* Vera Institute gathers their data through various methods and sources such as governmenal agencies, public records, surveys/interviews, other research institutions, data aggregation, and open data initiatives.   
+*Why was the data collected?* The data was collected because Vera Institute strives to research, test, and scale innovative solutions to end mass incarceration, leading to the collection of data such as this. 
+*How many observations (rows) are in your data?* There are 153811 rows.  
+*How many features (columns) are in the data?* There are 28 columns. 
+*What, if any, ethical questions or questions of power do you need to consider when working with this data?* One question I have regarding ethics is whether or not the race of the person is self-reported or one they had assumed. Since subjects such as race is becoming more liquid, I think that the data regarding race can be somewhat unreliable and a possible result of racial profiling. Other than that, since it is data primarily reflecting population/numbers of people, there are no other concerns regarding ethics.
+*What are possible limitations or problems with this data?   (at least 200 words)*
+A limitation/problem of the dataset is the sheer amount of missing data present. There are a lot of values that are seen as 'NA' and I even had to switch over from the "Dataset about prison population per county/state" to the "Dataset about jail population per county/state" since the first one kept leading to errors and printing 'NaN' whenever I tried to calculate averages. Due to these errors and the large amounts of missing data points, it is hard to say whether or not it is reliable and solid enough of a source to support a substantial case on the topic of racially disproportionate incarcerations. 
 
 ### Trends Over Time Chart
 
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
+This chart illustrates the number of black people in jail in the 5 most populated counties from 1985 to 2018. As you can see in the graph, Los Angeles County, which is also the most populated county, seemingly has the highest number of black people in jail especially in before 1995. After 1995, New York County has the highest number of black people in jail with Cook County coming in at a close second. However, Cook County as well as Harris County seem to have highly fluctuating black jail population numbers which may be due to missing values. Maricopa County has the lowest number of black people in jail but it seems to have been increasing over the past few decades with a spike at around 1998. 
 
-The first chart that you will create and include will show the trend over time of your variable/topic. Think carefully about what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
-
-- Show more than one, but fewer than ~10 trends
-  - This may mean showing the same measure for different locations or different racial groups. Think carefully about a meaningful comparison of locations (e.g., the top 10 counties in a state, top 10 states, etc.)
-- You must have clear x and y axis labels
-- The chart needs a clear title 
-- You need a legend for your different line colors and a clear legend title
-
-When we say "clear" or "human readable" titles and labels, that means that you should not just display the variable name.
-
-Here's an example of how to run an R script inside an RMarkdown file:
-
-``````{r, echo = FALSE, code = readLines("chart1_example.R")}
+``````{r, echo = FALSE, message=FALSE, warning=FALSE,code = readLines("chart1.R")}
 ```
 
 ### Variable Comparison Chart
