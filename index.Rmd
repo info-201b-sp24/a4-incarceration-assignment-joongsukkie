@@ -24,20 +24,17 @@ A limitation/problem of the dataset is the sheer amount of missing data present.
 
 ### Trends Over Time Chart
 
-This chart illustrates the number of black people in jail in the 5 most populated counties from 1985 to 2018. As you can see in the graph, Los Angeles County, which is also the most populated county, seemingly has the highest number of black people in jail especially in before 1995. After 1995, New York County has the highest number of black people in jail with Cook County coming in at a close second. However, Cook County as well as Harris County seem to have highly fluctuating black jail population numbers which may be due to missing values. Maricopa County has the lowest number of black people in jail but it seems to have been increasing over the past few decades with a spike at around 1998. 
+This chart illustrates the number of black people in jail in the 5 most populated counties from 1985 to 2018. However, I did remove Cook, Harris, and Orange County since although they are some of the highest populated counties, they did not have enough data on incarcerated black citizens to provide solid visualization. As you can see in the graph, Los Angeles County, which is also the most populated county, seemingly has the highest number of black people in jail up until 1995. After 1995, New York County has the highest number of black people in jail with Los Angeles County still coming in at a close second. Both see a decline in the number of incarcerated black citizens around 1997 up until the present. Far below Los Angeles and New York can be found the Miami-Dade County which seems to be at a flucuating decline after peaking in 2003. At the bottom can be found Maricopa and San Diego County. Although San Diego is relatively stable with no clear trend of an incline or decline, Maricopa has been at an incline after peaking at around 1998. 
 
-``````{r, echo = FALSE, message=FALSE, warning=FALSE,code = readLines("chart1.R")}
+``````{r, echo = FALSE, message = FALSE, warning = FALSE,code = readLines("chart1.R")}
 ```
 
 ### Variable Comparison Chart
 
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
+This chart illustrates the difference between the number of black people in jail and the total population (ages 15 to 64) for every single county. Each dot represents a county from 1998 because that is the year where there was a spike in the amount of incarcerated black citizens in the "Trends Over Time Chart". There seems to be a relatively normal trend with medium to high, positive correlation between the two variables. This means that all the counties have a relatively equal proportion between black people in jail and the total population that could be in jail. I chose to include this chart because this illustrates the different proportions between incarcerated black citizens and total population across most counties. 
 
-The second chart that you will create and include will show how two different (continuous) variables are related to one another. Again, think carefully about what such a comparison means and what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
-
-- You must have clear x and y axis labels
-- The chart needs a clear title 
-- If you choose to add a color encoding (not required), you need a legend for your different color and a clear legend title
+``````{r, echo = FALSE, message = FALSE, warning = FALSE,code = readLines("chart2.R")}
+```
 
 ### Map
 
