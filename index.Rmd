@@ -16,11 +16,17 @@ In order to have a grasp of what the proportions may look like, it will be impor
 ### The Dataset
 
 *Who collected the data?* The data was collected by Vera Institute. 
-*How was the data collected or generated?* Vera Institute gathers their data through various methods and sources such as governmenal agencies, public records, surveys/interviews, other research institutions, data aggregation, and open data initiatives.   
+
+*How was the data collected or generated?* Vera Institute gathers their data through various methods and sources such as governmenal agencies, public records, surveys/interviews, other research institutions, data aggregation, and open data initiatives. More specifically for the jails data, they collected the data from the Annual Survey of Jails (ASJ), Census of Jails (COJ), and population and separate variables from Death in Custody Reporting Program DCRP.
+
 *Why was the data collected?* The data was collected because Vera Institute strives to research, test, and scale innovative solutions to end mass incarceration, leading to the collection of data such as this. 
-*How many observations (rows) are in your data?* There are 153811 rows.  
+
+*How many observations (rows) are in your data?* There are 153811 rows. 
+
 *How many features (columns) are in the data?* There are 28 columns. 
+
 *What, if any, ethical questions or questions of power do you need to consider when working with this data?* One question I have regarding ethics is whether or not the race of the person is self-reported or one they had assumed. Since subjects such as race is becoming more liquid, I think that the data regarding race can be somewhat unreliable and a possible result of racial profiling. Other than that, since it is data primarily reflecting population/numbers of people, there are no other concerns regarding ethics.
+
 *What are possible limitations or problems with this data?   (at least 200 words)*
 A limitation/problem of the dataset is the sheer amount of missing data present. There are a lot of values that are seen as 'NA' and I even had to switch over from the "Dataset about prison population per county/state" to the "Dataset about jail population per county/state" since the first one kept leading to errors and printing 'NaN' whenever I tried to calculate averages. Due to these errors and the large amounts of missing data points, it is hard to say whether or not it is reliable and solid enough of a source to support a substantial case on the topic of racially disproportionate incarcerations. 
 

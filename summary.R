@@ -29,3 +29,6 @@ min_black_jail_pop_2018 <- jail_data %>%
   filter(!is.na(black_jail_pop)) %>%
   slice(which.min(black_jail_pop)) %>%
   select(county_name, black_jail_pop)
+
+num_rows <- nrow(jail_data)
+num_cols <- ncol(jail_data)
