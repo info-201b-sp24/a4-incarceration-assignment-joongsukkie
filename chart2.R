@@ -8,7 +8,7 @@ comma_format <- function(x) {
   formatC(x, format = "d", big.mark = ",")
 }
 ggplot(data_1998, aes(x = total_pop_15to64, y = black_jail_pop)) +
-  geom_point(color = "blue", size = 3) +
+  geom_point(color = "blue", size = 2) +
   scale_x_continuous(labels = comma_format, limits = c(0, 2500000)) +  
   scale_y_continuous(labels = comma_format, limits = c(0, 4000)) + 
   labs(x = "Population Ages 15 to 64", y = "Number Incarcerated Black Citizens",

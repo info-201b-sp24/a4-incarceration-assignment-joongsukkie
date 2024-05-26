@@ -15,7 +15,7 @@ top_data <- jail_data %>%
 line_colors <- c("red", "blue", "green", "purple", "orange")  # Example colors
 
 ggplot(top_data, aes(x = year, y = black_jail_pop, color = county_name, group = county_name)) +
-  geom_line(size = 1.5) +  
+  geom_line(size = 1) +  
   scale_color_manual(values = line_colors, name = "Legend") +
   labs(x = "Year", y = "Number of Incarcerated Black Citizens",
        title = "Number of Incarcerated Black Citizens Over Time",

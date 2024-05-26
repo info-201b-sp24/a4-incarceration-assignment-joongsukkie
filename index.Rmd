@@ -1,15 +1,17 @@
 ---
-title: "A3: Incarceration"
+title: "A5: Incarceration"
 output: html_document
 ---
 
 ### Introduction
 
-It is important to know the different proportions found across different state/counties concerning the difference between population and what amount of that population is in jails and what amount of those prisoners are black to justify what counties may be more dangerous or what cities are more likely to incarcerate black criminals. That is why I am choosing to analyze the current (2018) total population from 15 to 64 to represent the population that can legally be incarcerated of each state/county. I am also choosing to analyze the current (2018) total prison population of each state/county to help find the proportions between the county population and its prison population. The last variable I will analyze is the black jail population to compare it with the populations of jails and counties to compare differences and determine possible unfair/disproportionate numbers of incarcerated black citizens. 
+It is important to know the different proportions found across different state/counties concerning the difference between population and what amount of that population is in jails and what amount of those prisoners are black to justify what counties may be more dangerous or what cities are more likely to incarcerate black criminals. That is why I am choosing to analyze the current (2018) total population from 15 to 64 to represent the population that can legally be incarcerated of each state/county. I am also choosing to analyze the current (2018) total jail population of each state/county to help find the proportions between the county population and its jail population. The last variable I will analyze is the black jail population to compare it with the populations of jails and counties to compare differences and determine possible unfair/disproportionate numbers of incarcerated black citizens. 
+
+Dataset: https://github.com/melaniewalsh/Neat-Datasets/blob/main/us-jail-pop.csv?raw=true
 
 ### Summary Information
 
-In order to have a grasp of what the proportions may look like, it will be important to know what the largest and smallest counties are. The county with the highest total population from 15 to 64 is Los Angeles County with 6911101 as of 2018. The county with the lowest total population from 15 to 64 is Wade Hampton Census Area with 0 as of 2018. Another piece of data that will be important is the number of people that are found in jails which I will simply summarize for now by finding the mean. The average current total jail population per county is 248.945 as of 2018. Lastly, it is important to know the number of black people that are found in jails to discover any unfair/disproportionate incarceration of black citizens. The county with the highest total black people in prison is Los Angeles County with 5024 and the lowest was Bethel Census Area with 0 (both in 2018). 
+In order to have a grasp of what the proportions may look like, it will be important to know what the largest and smallest counties are. The county with the highest total population from 15 to 64 is Los Angeles County with 6911101 as of 2018. The county with the lowest total population from 15 to 64 is Wade Hampton Census Area with 0 as of 2018. Another piece of data that will be important is the number of people that are found in jails which I will simply summarize for now by finding the mean. The average current total jail population per county is 248.945 as of 2018. Lastly, it is important to know the number of black people that are found in jails to discover any unfair/disproportionate incarceration of black citizens. The county with the highest total black people in jail is Los Angeles County with 5024 and the lowest was Bethel Census Area with 0 (both in 2018). All summary statistics were found using functions that can be seen in summary.R. 
 
 ### The Dataset
 
@@ -38,11 +40,7 @@ This chart illustrates the difference between the number of black people in jail
 
 ### Map
 
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
+This map illustrates the distribution of black people in jail across the United States using the total number across all counties for each state in 2018. I included this chart because it helps illustrate the different amounts of incarcerated black citizens distributed across all the different states. California, by far, has the highest black jail population with Texas coming in second at just above 30,000,000. Other than New York and Florida, there are no other states above the 20,000,000 mark. Looking at the map, states such as Idaho, Montana, Dakota, Maine, and a few other states have incredibly small numbers of incarcerated black citizens. 
 
-The last chart that you will create and include will show how a variable is distributed geographically. Again, think carefully about what such a comparison means and what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
-
-- Your map needs a title
-- Your color scale needs a legend with a clear label
-- Use a map based coordinate system to set the aspect ratio of your map
-
+``````{r, echo = FALSE, message = FALSE, warning = FALSE,code = readLines("map.R")}
+```
